@@ -1,0 +1,26 @@
+=== Synaptiq Exercise 2 — live notebook execution proof ===
+Thu Aug 20 12:53:38 EDT 2026
+Python 3.14.6
+host: Darwin arm64
+
+$ jupyter nbconvert --to notebook --execute --inplace online_retail_ii_eda.ipynb
+[NbConvertApp] Converting notebook online_retail_ii_eda.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 185083 bytes to online_retail_ii_eda.ipynb
+$S/.venv/bin/jupyter nbconvert --to notebook --execute --inplace   5.33s user 1.65s system 57% cpu 12.110 total
+
+code cells executed: [1, 2, 3, 4, 5, 6]
+error outputs: 0
+
+$ jupyter nbconvert --to html online_retail_ii_eda.ipynb
+[NbConvertApp] Converting notebook online_retail_ii_eda.ipynb to html
+[NbConvertApp] WARNING | Alternative text is missing on 3 image(s).
+[NbConvertApp] Writing 474460 bytes to online_retail_ii_eda.html
+
+output checksums:
+cc13c9b8fdbdeee0285e23265ac2b1acf4679b3d845b470c2ace7eaa5715d243  online_retail_ii_eda.ipynb
+b7c9dfb842dc783bbdb08e7e705678ddecaf5a981b545f24bdf0c3ec10040be2  online_retail_ii_eda.html
+71ce5f91772c5b3409e692a8feb2b10008f6a0d5f49e873582d505ccac464874  figures/customer_pareto_deciles.png
+5fd136b1297ff578c15dbab5ed1c6fedba2fefb629763c5e1bc8c73a0a2e0ff9  figures/market_aov_comparison.png
+c213c2e0365d9533c2cb74993053e3d3c96c5094fe178d147a3e08135f0538d4  figures/monthly_revenue_trend.png
+6bb605435cc9ffb4ca0f95499c4cebc7be4f943c1c3b3b18472976e22bbebdb1  figures/top_international_markets.png
